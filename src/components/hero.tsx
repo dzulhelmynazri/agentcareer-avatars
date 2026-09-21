@@ -39,7 +39,7 @@ export const Hero = () => (
           nativeButton={false}
           render={
             <a
-              href="https://github.com/dzulhelmynazri/agentcareer"
+              href="https://github.com/dzulhelmynazri/agentcareer-avatars"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View on GitHub"
