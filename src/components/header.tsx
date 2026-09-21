@@ -28,15 +28,6 @@ export const Header = () => {
           </span>
         </Link>
 
-        <div className="flex items-center gap-4">
-          <Button
-            variant="ghost"
-            nativeButton={false}
-            render={<Link href="/playground" />}
-          >
-            Playground
-          </Button>
-
           <Button
             variant="outline"
             nativeButton={false}
@@ -51,7 +42,7 @@ export const Header = () => {
           >
             API Reference
           </Button>
-        </div>
+
       </div>
     </header>
   );
