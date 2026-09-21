@@ -155,7 +155,7 @@ export const AvatarPreview = () => {
             ) : (
               <Code2 data-icon="inline-start" />
             )}
-            Download
+            <span>{copiedKey === "quick-svg" ? "Copied!" : "Copy SVG"}</span>
           </Button>
 
           <Button variant="outline" onClick={handleDownload}>
