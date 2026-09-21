@@ -355,7 +355,7 @@ export const STATES: StateDef[] = [
     morph: 0.45,
     pose: () =>
       base({
-        dots: [{ x: -0.012, y: 0.526, r: 0.113, opacity: 1 }],
+        dots: [{ opacity: 1, r: 0.113, x: -0.012, y: 0.526 }],
         eyeAlpha: 0,
         sil: barUpright(),
       }),

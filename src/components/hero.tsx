@@ -16,11 +16,11 @@ export const Hero = () => (
       </div>
 
       <h1 className="text-foreground mt-8 max-w-[20ch] text-5xl font-semibold tracking-tight text-balance sm:text-7xl lg:text-8xl">
-        Avatars for AI Agents
+        Avatar API for Agents
       </h1>
 
       <p className="text-muted-foreground mt-6 max-w-[48ch] text-lg leading-relaxed text-pretty sm:text-2xl">
-        Fast, dynamic SVG avatars generated instantly from seed strings.
+        Beautiful, deterministic SVG avatars for your agents and users.
       </p>
 
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">

@@ -2,7 +2,7 @@
 
 ![AgentCareer Avatars Demo](./public/demo.png)
 
-A beautiful, open-source avatar generator built with Next.js 16, React 19, and Tailwind CSS v4.
+Beautiful, deterministic SVG avatars for your agents and users. Built with Next.js 16, React 19, and Tailwind CSS v4.
 
 ## Features
 
@@ -14,17 +14,18 @@ A beautiful, open-source avatar generator built with Next.js 16, React 19, and T
 ## Getting Started
 
 1. **Install dependencies:**
+
    ```bash
    bun install
    ```
 
 2. **Run the development server:**
+
    ```bash
    bun run dev
    ```
 
-3. **Open the app:**
-   Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+3. **Open the app:** Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## API Usage
 
