@@ -3,14 +3,10 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { ENV as env } from "@/env";
-import { generateAvatarSvg } from "@/lib/avatar/generator";
 
 export const Header = () => {
-  const avatarSvg = generateAvatarSvg({
-    seed: "agentcareer",
-    size: 64,
-  });
-  const avatarDataUri = `data:image/svg+xml;utf8,${encodeURIComponent(avatarSvg)}`;
+  const username = "agentcareer";
+  const avatarDataUri = `https://avatar.agentcareer.lol/api/avatar.svg?seed=${encodeURIComponent(username)}&animated=true`;
 
   return (
     <header className="border-border bg-background/80 sticky top-0 z-50 border-b backdrop-blur-md">

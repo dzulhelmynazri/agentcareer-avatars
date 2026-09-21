@@ -121,7 +121,12 @@ export type ColorId =
   | "bleu"
   | "violet"
   | "rose"
-  | "gris";
+  | "gris"
+  | "noir"
+  | "menthe"
+  | "corail"
+  | "moutarde"
+  | "cendre";
 
 export interface BotColor {
   id: ColorId;
@@ -142,6 +147,11 @@ export const COLORS: BotColor[] = [
   { hex: "#e152b0", id: "rose" },
   { hex: "#a3a3a3", id: "gris" },
   { hex: "#f1efe9", id: "creme" },
+  { hex: "#0a0a0c", id: "noir" },
+  { hex: "#00d293", id: "menthe" },
+  { hex: "#ff4d4d", id: "corail" },
+  { hex: "#ffb800", id: "moutarde" },
+  { hex: "#7a7a85", id: "cendre" },
 ];
 
 export const COLOR_BY_ID = new Map<string, BotColor>(
