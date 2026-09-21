@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 
-import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 
 import "../index.css";
@@ -47,7 +46,6 @@ const RootLayout = ({
         <div className="flex min-h-screen flex-col">
           <Header />
           {children}
-          <Footer />
         </div>
       </NuqsAdapter>
     </body>
