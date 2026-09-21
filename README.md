@@ -1,5 +1,7 @@
 # AgentCareer Avatars
 
+![AgentCareer Avatars Demo](./public/demo.png)
+
 A beautiful, open-source avatar generator built with Next.js 16, React 19, and Tailwind CSS v4.
 
 ## Features
@@ -31,6 +33,16 @@ You can generate avatars dynamically by passing query parameters to the API endp
 ```
 /api/avatar.svg?seed=agentcareer&animated=true&paper=transparent
 ```
+
+## Star History
+
+<a href="https://star-history.com/#dzulhelmynazri/agentcareer-avatars&Date">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=dzulhelmynazri/agentcareer-avatars&type=Date&theme=dark" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=dzulhelmynazri/agentcareer-avatars&type=Date" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=dzulhelmynazri/agentcareer-avatars&type=Date" />
+ </picture>
+</a>
 
 ## Contributing
 
