@@ -8,7 +8,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-
 import { COLOR_OPTIONS } from "@/constants/playground";
 import { useColorState } from "@/hooks/use-avatar-state";
 

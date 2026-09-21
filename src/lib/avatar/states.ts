@@ -237,10 +237,10 @@ export const STATES: StateDef[] = [
         dots: [0, 2].map((i) => {
           const k = dotPulse(t, i);
           return {
+            opacity: 0.55 + 0.45 * k,
+            r: DOT_R * (1 + (DOT_PEAK - 1) * k),
             x: DOT_X[i]! * emerge,
             y: 0,
-            r: DOT_R * (1 + (DOT_PEAK - 1) * k),
-            opacity: 0.55 + 0.45 * k,
           };
         }),
       });
@@ -256,13 +256,13 @@ export const STATES: StateDef[] = [
     morph: 0.3,
     pose: () =>
       base({
-        gaze: { yaw: -5.37, pitch: 4.55, roll: 6.7 },
+        gaze: { pitch: 4.55, roll: 6.7, yaw: -5.37 },
         split: 16.25,
         // L'oeil ferme n'est pas l'oeil ouvert ecrase : c'est un tiret
         // horizontal PLUS LARGE que l'oeil ouvert (0.447 contre 0.236).
         eyes: [
-          { w: 0.236, h: 0.464, open: 1 },
-          { w: 0.447, h: 0.089, open: 1 },
+          { h: 0.464, open: 1, w: 0.236 },
+          { h: 0.089, open: 1, w: 0.447 },
         ],
       }),
   },
@@ -276,9 +276,9 @@ export const STATES: StateDef[] = [
     morph: 0.55,
     pose: () =>
       base({
-        gaze: { yaw: 6.92, pitch: -21.96, roll: 11.6 },
-        split: 18.43,
         eyes: pair(0.356, 0.875),
+        gaze: { pitch: -21.96, roll: 11.6, yaw: 6.92 },
+        split: 18.43,
       }),
   },
 
@@ -313,7 +313,7 @@ export const STATES: StateDef[] = [
           },
         ],
         eyeAlpha: 0,
-        sil: barItalic({ rot: tilt, cx: x, cy: -0.325 - buzz }),
+        sil: barItalic({ cx: x, cy: -0.325 - buzz, rot: tilt }),
       });
     },
   },
@@ -333,14 +333,14 @@ export const STATES: StateDef[] = [
       const a = (NOTIF_ANGLE * Math.PI) / 180;
       return base({
         // le regard part a l'oppose de la pastille
-        gaze: { yaw: -21.94, pitch: -5.82, roll: -12.2 },
+        gaze: { pitch: -5.82, roll: -12.2, yaw: -21.94 },
         split: 18.89,
         eyes: pair(0.505, 0.498),
         notif: {
+          notch: r + NOTIF_MARGIN,
+          r,
           x: Math.cos(a) * NOTIF_DIST,
           y: Math.sin(a) * NOTIF_DIST,
-          r,
-          notch: r + NOTIF_MARGIN,
         },
       });
     },
@@ -355,9 +355,9 @@ export const STATES: StateDef[] = [
     morph: 0.45,
     pose: () =>
       base({
-        sil: barUpright(),
-        eyeAlpha: 0,
         dots: [{ x: -0.012, y: 0.526, r: 0.113, opacity: 1 }],
+        eyeAlpha: 0,
+        sil: barUpright(),
       }),
   },
 
@@ -386,7 +386,7 @@ export const STATES: StateDef[] = [
     pose: () =>
       base({
         sil: silhouette("egg"),
-        gaze: { yaw: 19.97, pitch: 26.01, roll: -17.1 },
+        gaze: { pitch: 26.01, roll: -17.1, yaw: 19.97 },
         // les yeux se resserrent comme le corps
         split: 11.07,
         eyes: pair(0.164, 0.385),
@@ -402,10 +402,10 @@ export const STATES: StateDef[] = [
     morph: 0.4,
     pose: () =>
       base({
-        sil: silhouette("hexagon"),
-        gaze: { yaw: 23.11, pitch: 24.42, roll: -13.3 },
-        split: 13.37,
         eyes: pair(0.177, 0.411),
+        gaze: { pitch: 24.42, roll: -13.3, yaw: 23.11 },
+        sil: silhouette("hexagon"),
+        split: 13.37,
       }),
   },
 
@@ -421,15 +421,15 @@ export const STATES: StateDef[] = [
       const fade = clamp(t / 0.35) * clamp((2.2 - t) / 0.5);
       return base({
         sil: spinningTriangle(0),
-        gaze: { yaw: 12, pitch: -8, roll: -6 },
+        gaze: { pitch: -8, roll: -6, yaw: 12 },
         split: 15,
         eyes: pair(0.18, 0.34),
         // le bouquet balaie de la droite vers la gauche par-dessus le triangle
         arcs: SWOOSH.map((s, i) => ({
           id: `sw${i}`,
+          opacity: fade,
           seed: { ...s, cx: 0.45 - t * 0.42 },
           t,
-          opacity: fade,
         })),
       });
     },

@@ -14,11 +14,7 @@ import {
   FieldLabel,
   FieldTitle,
 } from "@/components/ui/field";
-import {
-  RadioGroup,
-  RadioGroupItem,
-} from "@/components/ui/radio-group";
-
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { EXPRESSION_OPTIONS } from "@/constants/playground";
 import { useExpressionState } from "@/hooks/use-avatar-state";
 

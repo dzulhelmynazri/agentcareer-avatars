@@ -1,8 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Github } from "@/components/socials";
 import Link from "next/link";
+
+import { Github } from "@/components/socials";
+import { Button } from "@/components/ui/button";
 
 import { CompanyMarquee } from "./company-marquee";
 

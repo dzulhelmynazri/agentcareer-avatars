@@ -375,7 +375,7 @@ function visageDe(
   expr: BotExpression | null
 ): Visage {
   if (def.baseFace && expr) {
-    return { gaze: expr.gaze, split: expr.split, eyes: expr.eyes };
+    return { eyes: expr.eyes, gaze: expr.gaze, split: expr.split };
   }
   return { eyes: pose.eyes, gaze: pose.gaze, split: pose.split };
 }

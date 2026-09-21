@@ -19,7 +19,7 @@ export const svgAnime = (
   }
 
   let n = 0;
-  const maskAnime = mask[0].replace(
+  const maskAnime = mask[0].replaceAll(
     /transform="matrix\([^)]*\)"/g,
     () => `class="oeil${n++}"`
   );

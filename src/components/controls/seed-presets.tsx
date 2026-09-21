@@ -1,5 +1,8 @@
 "use client";
 
+import { Dices } from "lucide-react";
+import { useId } from "react";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,13 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { FieldLabel } from "@/components/ui/field";
-import {
-  InputGroup,
-  InputGroupInput,
-} from "@/components/ui/input-group";
-import { Dices } from "lucide-react";
-import { useId } from "react";
-
+import { InputGroup, InputGroupInput } from "@/components/ui/input-group";
 import { PRESET_SEEDS } from "@/constants/playground";
 import { useSeedState } from "@/hooks/use-avatar-state";
 

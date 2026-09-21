@@ -1,11 +1,14 @@
 {
   "name": "avatar",
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "next dev --port 3004",
     "build": "next build",
     "check-types": "tsc --noEmit",
-    "start": "next start --port 3004"
+    "start": "next start --port 3004",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -27,7 +30,10 @@
     "@types/node": "^26.6.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "oxfmt": "^0.69.0",
+    "oxlint": "^1.84.0",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "ultracite": "7.12.0"
   }
 }
