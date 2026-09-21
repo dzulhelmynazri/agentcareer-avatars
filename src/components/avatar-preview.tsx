@@ -4,7 +4,6 @@ import { Check, Code2, Copy, Dices, Download } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -107,16 +106,7 @@ export const AvatarPreview = () => {
   return (
     <Card className="w-full max-w-md">
       <CardHeader>
-        <CardTitle>
-          {animated ? (
-            <Badge variant="secondary">
-              <span className="bg-primary size-1.5 animate-pulse rounded-full" />
-              CSS 30 FPS
-            </Badge>
-          ) : (
-            <Badge variant="outline">Static SVG</Badge>
-          )}
-        </CardTitle>
+        <CardTitle>{seed}</CardTitle>
         <CardAction>
           <Button
             variant="outline"
@@ -140,14 +130,10 @@ export const AvatarPreview = () => {
             className="size-full"
           />
         </div>
-
-        <div className="text-center font-mono text-sm font-semibold tracking-wide">
-          {seed}
-        </div>
       </CardContent>
 
       <CardFooter>
-        <div className="grid w-full grid-cols-3 gap-2 border-t">
+        <div className="grid w-full grid-cols-3 gap-2">
           <Button
             variant="outline"
             onClick={() => handleCopy(apiUrl, "quick-url")}
